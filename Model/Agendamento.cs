@@ -11,16 +11,18 @@ namespace PetShop.Model
     {
         [Key]
         public int AgendametoId { get; set; }
-
         public DateTime DataHora { get; set; }
-
-        public string Servico { get; set; }
-
-        [ForeignKey("AnimalId")]
-        public string AnimalId { get; set; }
-
-        public virtual Animal Animal { get; set; }
-
-
+        [Required]
+        public string CpfCliente { get; set; }
+        [Required]
+        public string NomeServico { get; set; }
     }
 }
+
+
+
+
+
+      
+
+

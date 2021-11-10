@@ -36,20 +36,27 @@ namespace PetShop
             });
 
             services.AddDbContext<PetShopContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("PetShopContext")));
+            options.UseSqlServer(Configuration.GetConnectionString("PetShopContext")));
+
+            services.AddCors();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            app.UseCors(options =>
+            options.WithOrigins("http://localhost:4200")
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PetShop v1"));
             }
-
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 

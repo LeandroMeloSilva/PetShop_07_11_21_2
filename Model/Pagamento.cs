@@ -11,17 +11,18 @@ namespace PetShop.Model
     {
         [Key]
         public int PagamentoId { get; set; }
-
+        public DateTime DataPagamento { get; set; }
         [Required]
-        [Column(TypeName = "decimal(6, 2)")]
-        public decimal Valor_total { get; set; }
-
-        [ForeignKey("ClienteId")]
-        public string ClienteId { get; set; }
-
-        public virtual Cliente Cliente { get; set; }
-
-
-
+        public double ValorTotal { get; set; }
+        [Required]
+        public string CpfCliente { get; set; }
     }
 }
+
+
+
+
+
+       
+
+

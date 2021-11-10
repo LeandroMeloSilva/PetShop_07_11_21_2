@@ -12,15 +12,16 @@ namespace PetShop.Model
         [Key]
         public int ClienteId { get; set; }
         [Required(ErrorMessage = "Um nome é obrigatório!")]
-        [Column(TypeName = "nvarchar(100)")]
         public string Nome { get; set; }
-        [Required(ErrorMessage = "O número do CPF é obrigatório!")]
-        [Column(TypeName = "nvarchar(11)")]
         public string CPF { get; set; }
         [Required(ErrorMessage = "O número de telefone é obrigatório!")]
-        [Column(TypeName = "nvarchar(9)")]
         public string Telefone { get; set; }
         public string Email { get; set; }
         public string Endereco { get; set; }
+        public string NomeAnimal { get; set; }
+        public string NomeRaca { get; set; }
+        public string GeneroAnimal { get; set; }
+        public string Comportamento { get; set; }
+
     }
-}
+} 

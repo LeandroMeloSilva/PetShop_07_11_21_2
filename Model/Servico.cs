@@ -11,16 +11,13 @@ namespace PetShop.Model
     {
         [Key]
         public int ServicoId { get; set; }
-
         public string Descricao { get; set; }
-
         [Required]
-        [Column(TypeName = "decimal(6, 2)")]
-        public decimal Valor { get; set; }
-
-        public float Duracao { get; set; }
-
-
-
+        public string Valor { get; set; }
+        public string Duracao { get; set; }
     }
 }
+        
+
+
+
