@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PetShop.Migrations
 {
-    public partial class final : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,7 +11,7 @@ namespace PetShop.Migrations
                 name: "Agendamento",
                 columns: table => new
                 {
-                    AgendametoId = table.Column<int>(type: "int", nullable: false)
+                    AgendamentoId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DataHora = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CpfCliente = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -19,7 +19,7 @@ namespace PetShop.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Agendamento", x => x.AgendametoId);
+                    table.PrimaryKey("PK_Agendamento", x => x.AgendamentoId);
                 });
 
             migrationBuilder.CreateTable(

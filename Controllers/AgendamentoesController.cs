@@ -47,7 +47,7 @@ namespace PetShop.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAgendamento(int id, Agendamento agendamento)
         {
-            if (id != agendamento.AgendametoId)
+            if (id != agendamento.AgendamentoId)
             {
                 return BadRequest();
             }
@@ -81,7 +81,7 @@ namespace PetShop.Controllers
             _context.Agendamento.Add(agendamento);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetAgendamento", new { id = agendamento.AgendametoId }, agendamento);
+            return CreatedAtAction("GetAgendamento", new { id = agendamento.AgendamentoId }, agendamento);
         }
 
         // DELETE: api/Agendamentoes/5
@@ -102,7 +102,7 @@ namespace PetShop.Controllers
 
         private bool AgendamentoExists(int id)
         {
-            return _context.Agendamento.Any(e => e.AgendametoId == id);
+            return _context.Agendamento.Any(e => e.AgendamentoId == id);
         }
     }
 }

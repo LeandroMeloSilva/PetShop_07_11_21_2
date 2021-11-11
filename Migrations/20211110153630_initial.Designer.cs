@@ -10,8 +10,8 @@ using PetShop.Data;
 namespace PetShop.Migrations
 {
     [DbContext(typeof(PetShopContext))]
-    [Migration("20211109200548_final")]
-    partial class final
+    [Migration("20211110153630_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,7 +23,7 @@ namespace PetShop.Migrations
 
             modelBuilder.Entity("PetShop.Model.Agendamento", b =>
                 {
-                    b.Property<int>("AgendametoId")
+                    b.Property<int>("AgendamentoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -39,7 +39,7 @@ namespace PetShop.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("AgendametoId");
+                    b.HasKey("AgendamentoId");
 
                     b.ToTable("Agendamento");
                 });

@@ -21,7 +21,7 @@ namespace PetShop.Migrations
 
             modelBuilder.Entity("PetShop.Model.Agendamento", b =>
                 {
-                    b.Property<int>("AgendametoId")
+                    b.Property<int>("AgendamentoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -37,7 +37,7 @@ namespace PetShop.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("AgendametoId");
+                    b.HasKey("AgendamentoId");
 
                     b.ToTable("Agendamento");
                 });
